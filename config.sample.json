@@ -1,0 +1,5 @@
+{
+  "interface_port": 80,
+  "tracker_port": 6969,
+  "hostname": "tracker.deuxfleurs.fr"
+}

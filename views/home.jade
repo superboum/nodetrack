@@ -10,9 +10,9 @@ block content
           div(style="float: right")
             button.btn.btn-sm(role="submit") Env0yer
           br(style="clear:both")
-        pre.
-          http://tracker.deuxfleurs.fr:6969/announce
-          udp://tracker.deuxfleurs.fr:6969/announce
+        pre
+          = "http://"+ config.hostname +":"+ config.tracker_port +"/announce\n"
+          = "udp://"+ config.hostname +":"+ config.tracker_port +"/announce"
 
     hr
     table

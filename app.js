@@ -6,6 +6,7 @@ var body = require('koa-body');
 var parseTorrent = require('parse-torrent');
 var fs = require('fs');
 var BtServ = require('bittorrent-tracker').Server;
+var config = require('./config.json');
 
 var mybtserv = new BtServ({
   http: true,
@@ -16,7 +17,7 @@ var mybtserv = new BtServ({
   }
 })
 
-mybtserv.listen(6969);
+mybtserv.listen(config.tracker_port);
 
 var onHttpRequest = mybtserv.onHttpRequest.bind(mybtserv),
     catchError = function *(next) {
@@ -47,7 +48,8 @@ router
 
 app
   .use(serve('public'))
+  .use(function *(next) { this.state.config = config; yield next; })
   .use(body({multipart: true, formidable:{uploadDir: __dirname+'/uploads'}}))
   .use(jade.middleware({viewPath: __dirname+'/views'}))
   .use(router.routes())
-  .listen(80)
+  .listen(config.interface_port)
