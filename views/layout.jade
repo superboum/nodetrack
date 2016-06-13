@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Tracker Deuxfleurs
+    title= config.hostname
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, user-scalable=no")
     link(rel="stylesheet", href="/primer.css")
@@ -16,6 +16,6 @@ html
 
   body
     .container
-      h1 Tracker Deuxfleurs
+      h1= config.hostname
       
     block content 

@@ -1,6 +1,8 @@
 nodetrack
 =========
 
+![A screenshot of NodeTrack](http://dufour.tk/~quentin/img/nodetrack.png)
+
 A quick'n'dirty torrent tracker, mainly used to share files faster during a LAN party.
 
 Installation
