@@ -1,0 +1,20 @@
+{
+  "name": "nodetrack",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quentin Dufour",
+  "license": "ISC",
+  "dependencies": {
+    "bittorrent-tracker": "^4.5.0",
+    "koa": "^0.21.0",
+    "koa-body": "^1.2.1",
+    "koa-jade": "^1.1.0",
+    "koa-router": "^5.1.2",
+    "koa-static": "^1.4.9",
+    "parse-torrent": "^5.1.1"
+  }
+}

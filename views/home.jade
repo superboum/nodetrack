@@ -1,0 +1,32 @@
+extends ./layout
+
+block content
+  .container
+    .columns
+      .one-half.centered
+        form(method="post", enctype="multipart/form-data")
+          div(style="float: left")
+            input(type="file", accept=".torrent", name="torrentfile")
+          div(style="float: right")
+            button.btn.btn-sm(role="submit") Env0yer
+          br(style="clear:both")
+        pre.
+          http://tracker.deuxfleurs.fr:6969/announce
+          udp://tracker.deuxfleurs.fr:6969/announce
+
+    hr
+    table
+      tr
+        th Name
+        th Comment
+        th Seed
+        th Leech
+        th Action
+      each t,i in torrents
+        tr
+          td= t.name
+          td= t.comment
+          td= live[t.infoHash] ? live[t.infoHash].complete : 0
+          td= live[t.infoHash] ? live[t.infoHash].incomplete : 0
+          td 
+            a.btn.btn-sm(role="button", href="/torrent/"+i+"/download/"+t.name+".torrent") Download
