@@ -23,7 +23,7 @@ Check that your installed version is superior to 0.12.0 :
 node -v
 ```
 
-*If your system can't find the command `node`, it might be because it's installed as `nodejs`. You may encounter some problem with npm if your command is not named node. You can add a symlink (as root) : `ln -s /usr/bin/nodejs /usr/bin/node` or use a cleaner approach with update-alternatives tool, a package named node-legacy or whatever you can imagine*.
+*If your system can't find the command `node`, it might be because it's installed as `nodejs`. You may encounter some problem with npm if your command is not named node. You can add a symlink (as root) : `ln -s /usr/bin/nodejs /usr/bin/node` or use a cleaner approach with the tool update-alternatives, a package named node-legacy or whatever you can imagine*.
 
 Now, you can install and configure nodetrack :
 
