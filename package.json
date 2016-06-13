@@ -9,7 +9,7 @@
   "author": "Quentin Dufour",
   "license": "ISC",
   "dependencies": {
-    "bittorrent-tracker": "^4.5.0",
+    "bittorrent-tracker": "^8.0.7",
     "koa": "^0.21.0",
     "koa-body": "^1.2.1",
     "koa-jade": "^1.1.0",
